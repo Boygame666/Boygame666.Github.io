@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portofolio William</title>
+    <link rel="icon" href="fotos/icono%20pag.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.icono{float: right}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+    
+<body >
+<!-- Barra de tareas/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding " style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Cerrar</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Alfredo William<br>Ancieta Hinostroza</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicio</a> 
+    <a href="#Muestras" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Muestras</a> 
+    <a href="#Biografia" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Biografia</a> 
+        <a href="#Proyectos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Proyectos</a>
+      <a href="#contacto" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+  </div>
+    <img src="fotos/Robot.png">
+    
+</nav>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Alfredo William</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="Muestras">
+      <a class="icono"><img src="fotos/Simbolo%20web%20(Tranparente).png"></a>
+    <h1 class="w3-jumbo w3-text-red "><b>Programador</b></h1>
+      <h1 class="w3-xxxlarge w3-text-red"><b>Muestras.</b></h1>
+    <hr style="width:50px;border:5px solid red " class="w3-round " >
+  </div>
+  
+  <!-- Muestras -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="/fotos/Programar.jfif" style="width:100%" onclick="onClick(this)" alt="Lenguaje de codigo">
+      <img src="/fotos/videojuegos.jfif" style="width:100%" onclick="onClick(this)" alt="Creacion de videojuegos">
+      <img src="/fotos/webs.png" style="width:100%" onclick="onClick(this)" alt="Creacion de paginas web">
+    </div>
+
+    <div class="w3-half">
+      <img src="/fotos/Seguridad.jfif" style="width:100%" onclick="onClick(this)" alt="Programacion de seguridad web">
+      <img src="/fotos/Inteligencia%20artificil.jfif" style="width:100%" onclick="onClick(this)" alt="Programacion de IA">
+      <img src="/fotos/Futuros%20proyectos.png" style="width:100%" onclick="onClick(this)" alt="futuros proyectos proyectos">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Biografia -->
+  <div class="w3-container" id="Biografia" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Biografia.</b></h1>
+      <img src="fotos/biografia.png">
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Mi Nombre es Alfredo William Ancieta Hinostroza conocido en las redes sociales como Boygame666</p>
+    <p>Soy un programador promedio y alumno de esne donde estudio Diseño y programacion de videojuegos, me especializo en codigo C# y C++ con los programas de visual studio 2019 para la programacion ey unity para la creacion de videojuegos al igual que sus derivaciones y variente de ellas.
+    Soy capaz de trabajar en solitario como trabajar en equipo,siempre intento comunicarme con los demas para evitar dudas en los trabajos de cada uno y puedo mantener bien trabajando bajo presion.
+    </p>
+      <p>En el siguiente enlace puede ver mi curriculum.</p>
+      <div class="button">
+          <a href="fotos/Curriculum-Alfredo_william.pdf" target="_blank">
+           <span> Ver mi curriculum </span>
+          </a>
+      </div>
+  </div>
+  
+  <!-- Proyectos -->
+  <div class="w3-container" id="Proyectos" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Proyectos.</b></h1>
+      <img src="fotos/Icono.png">
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Aqui les voy a mostrar y hablar un poco de los proyectos en los que he participado.</p>
+    <p>Under trash fue el primer videojuego en el cual ayude un poco en codigo y arte durante la jam de 2020 en esne junto a mis compañeros Vicente, Fran y Angela, no conseguimos el primer puesto pero fue un gran intento.
+    </p>
+      <p>Perez en el museo, un videojuego que esta en google play store , fue un trabajo de un gran grupo ,casi un point and click,que se basa es tres minijuego que el jugador tiene que completar dirigidos a un publico joven.</p>
+      <p>Jump-It ,diria que el mejor de los dos anteriores,creado en el 2022 con 6 niveles diseñados por mi siendo un scroll vertical donde el jugador tendra que llegar a lo mas alto para salir a la superficie,con un codigo muy limpio y un arte que se tardo en llegar pero no fue para nada decepccionante.</p>
+      <p>Picture es un trabajo en la cual trabaje como programador y una aprte de diseño, mi trabajo en el juego fue en base a los trigger de TP cuando el personaje usa su camara en ciertas partes y sobre el audio del juego.</p>
+    <p><b>Los juegos en concreto</b>:</p>
+  </div>
+
+  <!-- Proyectos -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/fotos/under%20trash.png" alt="Under trash" style="width:100%">
+        <div class="w3-container">
+          <h3>Under trash</h3>
+          <p class="w3-opacity">Primera Jam</p>
+          <p>Lo puede encontrar aqui <a href="https://vicen-te.itch.io/undertrash" title="W3.CSS" target="_blank" class="w3-hover-opacity">Under trash</a> .</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/fotos/Perez.jfif" alt="Perez" style="width:100%">
+        <div class="w3-container" >
+          <h3>Perez en el museo</h3>
+          <p class="w3-opacity">Primer juego movil</p>
+          <p>Ya no se encuentra en la google play store.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/fotos/Jump-it.jfif" alt="Jump.It" style="width:100%">
+        <div class="w3-container">
+          <h3>Jump-It</h3>
+          <p class="w3-opacity">Segundo juego movil</p>
+          <p>Esta creado pero no tiene acceso publico.</p>
+        </div>
+      </div>
+    </div>
+     <div class="w3-col m4 w3-margin-left">
+      <div class="w3-light-grey">
+        <img src="/fotos/Picture.png" alt="Picture" style="width:100%">
+        <div class="w3-container">
+          <h3>Picture</h3>
+          <p class="w3-opacity">Proyecto de clase</p>
+          <p>Lo puede encontrar aqui <a href="https://twin-ducks.itch.io/picture" title="W3.CSS" target="_blank" class="w3-hover-opacity">Picture</a> .</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <!-- Contacto -->
+  <div class="w3-container" id="contacto" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contacto.</b></h1>
+      <img src="fotos/contacto.png">
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Si tienes alguna pregunta mas sobre mi y quieres conocerme mejor, aqui te dejo una forma de contactarme</p>
+    <div>    
+        <a class="fab fa-linkedin" href="https://www.linkedin.com/in/alfredo-william-ancieta-hinostroza-b45046257" target="_blank">
+            <img src="fotos/Linkedin.jpg.png" style="width:20%" onclick="onClick" class="w3-bar-item w2-button w3-hover-red">
+        </a>
+        <a class="fab fa-Github" href="https://github.com/Boygame666" target="_blank">
+         <img src="/fotos/Github.png" style="width:20%" onclick="onClick" class="w3-bar-item w2-button w3-hover-red" >
+        </a>
+        <a class="fab fa-twitter" href="https://twitter.com/boygame666" target="_blank">
+            <img src="fotos/twitter.jpg.png" style="width:20%" onclick="onClick" class="w3-bar-item w2-button w3-hover-red">
+        </a>
+      </div>
+  </div>
+
+<!-- Fin de la pag -->
+</div>
+
+
+<script>
+// Script para abrir y cerrar la barra de tareas
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
