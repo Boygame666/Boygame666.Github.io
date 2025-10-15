@@ -8,17 +8,76 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.icono{float: right}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
+body, h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  scroll-behavior: smooth;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ====== ELEMENTOS ====== */
+.icono { float: right }
+.w3-half img {
+  margin-bottom: -6px;
+  margin-top: 16px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.w3-half img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ====== TARJETAS ====== */
+.w3-light-grey {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(8px);
+}
+.w3-light-grey:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ====== TITULOS ====== */
+h1.w3-xxxlarge, h1.w3-jumbo {
+  color: #E63946 !important;
+  text-shadow: 0 0 10px rgba(230,57,70,0.5);
+}
+
+/* ====== BOTONES ====== */
+.button a {
+  display: inline-block;
+  background: #E63946;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+.button a:hover {
+  background: #FF6B6B;
+  transform: scale(1.05);
+}
 </style>
 </head>
-    
 <body >
+    
 <!-- Barra de tareas/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding " style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;background:#E63946;box-shadow: 5px 0 15px rgba(0,0,0,0.3);" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Cerrar</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><b>Alfredo William<br>Ancieta Hinostroza</b></h3>
@@ -78,7 +137,7 @@ body {font-size:16px;}
   </div>
 
   <!-- Biografia -->
-  <div class="w3-container" id="Biografia" style="margin-top:75px">
+  <div class="w3-container" id="Biografia" style="margin-top:75px" data-aos="fade-right">
     <h1 class="w3-xxxlarge w3-text-red"><b>Biografia.</b></h1>
       <img src="fotos/biografia.png">
     <hr style="width:50px;border:5px solid red" class="w3-round">
@@ -95,7 +154,7 @@ body {font-size:16px;}
   </div>
   
   <!-- Proyectos -->
-  <div class="w3-container" id="Proyectos" style="margin-top:75px">
+  <div class="w3-container" id="Proyectos" style="margin-top:75px" data-aos="fade-up">
     <h1 class="w3-xxxlarge w3-text-red"><b>Proyectos.</b></h1>
       <img src="fotos/Icono.png">
     <hr style="width:50px;border:5px solid red" class="w3-round">
@@ -113,99 +172,108 @@ body {font-size:16px;}
     <p><b>Los juegos en concreto</b>:</p>
   </div>
 
-  <!-- Proyectos -->
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="fotos/under%20trash.png" alt="Under trash" style="width:100%">
-        <div class="w3-container">
-          <h3>Under trash</h3>
-          <p class="w3-opacity">Primera Jam</p>
-          <p>Lo puede encontrar aqui <a href="https://vicen-te.itch.io/undertrash" title="W3.CSS" target="_blank" class="w3-hover-opacity">Under trash</a> .</p>
-        </div>
+  <!-- PROYECTOS -->
+<div class="w3-container" id="Proyectos" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red" data-aos="fade-right"><b>Proyectos.</b></h1>
+  <img src="fotos/Icono.png" data-aos="fade-right" data-aos-delay="150">
+  <hr style="width:50px;border:5px solid red" class="w3-round" data-aos="fade-right" data-aos-delay="300">
+  <p data-aos="fade-up">Aquí te muestro algunos de los proyectos en los que he participado:</p>
+
+  <div class="w3-row-padding" style="margin-top:40px;display:flex;flex-wrap:wrap;justify-content:center;gap:30px;">
+    
+    <!-- Proyecto 1 -->
+    <div class="w3-card w3-light-grey w3-hover-shadow" style="width:300px;border-radius:15px;overflow:hidden;" data-aos="zoom-in">
+      <img src="fotos/under trash.png" alt="Under Trash" style="width:100%;height:200px;object-fit:cover;">
+      <div class="w3-container w3-center">
+        <h3 style="color:#E63946;">Under Trash</h3>
+        <p class="w3-opacity">Primera Jam</p>
+        <p>Lo puedes encontrar <a href="https://vicen-te.itch.io/undertrash" target="_blank" style="color:#E63946;font-weight:600;">aquí</a>.</p>
       </div>
     </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="fotos/Perez.jfif" alt="Perez" style="width:100%">
-        <div class="w3-container" >
-          <h3>Perez en el museo</h3>
-          <p class="w3-opacity">Primer juego movil</p>
-          <p>Ya no se encuentra en la google play store.</p>
-        </div>
+
+    <!-- Proyecto 2 -->
+    <div class="w3-card w3-light-grey w3-hover-shadow" style="width:300px;border-radius:15px;overflow:hidden;" data-aos="zoom-in" data-aos-delay="100">
+      <img src="fotos/Perez.jfif" alt="Perez en el museo" style="width:100%;height:200px;object-fit:cover;">
+      <div class="w3-container w3-center">
+        <h3 style="color:#E63946;">Perez en el museo</h3>
+        <p class="w3-opacity">Primer juego móvil</p>
+        <p>Ya no se encuentra en Google Play Store.</p>
       </div>
     </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="fotos/Jump-it.jfif" alt="Jump.It" style="width:100%">
-        <div class="w3-container">
-          <h3>Jump-It</h3>
-          <p class="w3-opacity">Segundo juego movil</p>
-          <p>Esta creado pero no tiene acceso publico.</p>
-        </div>
+
+    <!-- Proyecto 3 -->
+    <div class="w3-card w3-light-grey w3-hover-shadow" style="width:300px;border-radius:15px;overflow:hidden;" data-aos="zoom-in" data-aos-delay="200">
+      <img src="fotos/Jump-it.jfif" alt="Jump-It" style="width:100%;height:200px;object-fit:cover;">
+      <div class="w3-container w3-center">
+        <h3 style="color:#E63946;">Jump-It</h3>
+        <p class="w3-opacity">Segundo juego móvil</p>
+        <p>Creado, pero no tiene acceso público.</p>
       </div>
     </div>
-     <div class="w3-col m4 w3-margin-left">
-      <div class="w3-light-grey">
-        <img src="fotos/Picture.png" alt="Picture" style="width:100%">
-        <div class="w3-container">
-          <h3>Picture</h3>
-          <p class="w3-opacity">Proyecto de clase</p>
-          <p>Lo puede encontrar aqui <a href="https://twin-ducks.itch.io/picture" title="W3.CSS" target="_blank" class="w3-hover-opacity">Picture</a> .</p>
-        </div>
+
+    <!-- Proyecto 4 -->
+    <div class="w3-card w3-light-grey w3-hover-shadow" style="width:300px;border-radius:15px;overflow:hidden;" data-aos="zoom-in">
+      <img src="fotos/Picture.png" alt="Picture" style="width:100%;height:200px;object-fit:cover;">
+      <div class="w3-container w3-center">
+        <h3 style="color:#E63946;">Picture</h3>
+        <p class="w3-opacity">Proyecto de clase</p>
+        <p>Lo puedes encontrar <a href="https://twin-ducks.itch.io/picture" target="_blank" style="color:#E63946;font-weight:600;">aquí</a>.</p>
       </div>
     </div>
-    <div class="w3-col m3 w3-margin-right">
-      <div class="w3-light-grey">
-        <img src="fotos/TalesOfBlood.jpeg" alt="Picture" style="width:100%">
-        <div class="w3-container">
-          <h3>Tales Of Blood</h3>
-          <p class="w3-opacity">TFG de la Universidad</p>
-          <p>Lo puede encontrar aqui <a href="https://crimson-fang.itch.io/talesofblood" title="W3.CSS" target="_blank" class="w3-hover-opacity">Tales Of Blood</a> .</p>
-        </div>
+
+    <!-- Proyecto 5 -->
+    <div class="w3-card w3-light-grey w3-hover-shadow" style="width:300px;border-radius:15px;overflow:hidden;" data-aos="zoom-in" data-aos-delay="100">
+      <img src="fotos/TalesOfBlood.jpeg" alt="Tales Of Blood" style="width:100%;height:200px;object-fit:cover;">
+      <div class="w3-container w3-center">
+        <h3 style="color:#E63946;">Tales Of Blood</h3>
+        <p class="w3-opacity">TFG de la Universidad</p>
+        <p>Lo puedes encontrar <a href="https://crimson-fang.itch.io/talesofblood" target="_blank" style="color:#E63946;font-weight:600;">aquí</a>.</p>
       </div>
     </div>
-    <div class="w3-col m4 w3-margin-left ">
-      <div class="w3-light-grey">
-        <img src="fotos/TheHiker.jpg" alt="Picture" style="width:100%">
-        <div class="w3-container">
-          <h3>The Hiker</h3>
-          <p class="w3-opacity">Practica de la Universidad(Empresa GoodGreen)</p>
-          <p>Lo puede encontrar aqui y añadirlo a tu lista de deseados para asi pillarlo cuando salga <a href="https://store.steampowered.com/app/2712940/The_Hiker/?l=spanish" title="W3.CSS" target="_blank" class="w3-hover-opacity">The Hiker</a> .</p>
-        </div>
+
+    <!-- Proyecto 6 -->
+    <div class="w3-card w3-light-grey w3-hover-shadow" style="width:300px;border-radius:15px;overflow:hidden;" data-aos="zoom-in" data-aos-delay="200">
+      <img src="fotos/TheHiker.jpg" alt="The Hiker" style="width:100%;height:200px;object-fit:cover;">
+      <div class="w3-container w3-center">
+        <h3 style="color:#E63946;">The Hiker</h3>
+        <p class="w3-opacity">Práctica profesional (GoodGreen)</p>
+        <p>Disponible en <a href="https://store.steampowered.com/app/2712940/The_Hiker/?l=spanish" target="_blank" style="color:#E63946;font-weight:600;">Steam</a>.</p>
       </div>
     </div>
-      <div class="w3-col m4 w3-margin-left ">
-      <div class="w3-light-grey">
-        <img src="fotos/Los_Ojos_Verdes.jpeg" alt="Picture" style="width:100%">
-        <div class="w3-container">
-          <h3>Los Ojos Verdes</h3>
-          <p class="w3-opacity">GameJam con compañeros</p>
-          <p> Lo puedes encontrar aqui <a href="https://hazudesu.itch.io/los-ojos-verdes" title="W3.CSS" target="_blank" class="w3-hover-opacity">Los_Ojos_Verdes</a> .</p>
-        </div>
+
+    <!-- Proyecto 7 -->
+    <div class="w3-card w3-light-grey w3-hover-shadow" style="width:300px;border-radius:15px;overflow:hidden;" data-aos="zoom-in">
+      <img src="fotos/Los_Ojos_Verdes.jpeg" alt="Los Ojos Verdes" style="width:100%;height:200px;object-fit:cover;">
+      <div class="w3-container w3-center">
+        <h3 style="color:#E63946;">Los Ojos Verdes</h3>
+        <p class="w3-opacity">GameJam con compañeros</p>
+        <p>Lo puedes encontrar <a href="https://hazudesu.itch.io/los-ojos-verdes" target="_blank" style="color:#E63946;font-weight:600;">aquí</a>.</p>
       </div>
     </div>
-      <div class="w3-col m4 w3-margin-left ">
-      <div class="w3-light-grey">
-        <img src="fotos/You_Pop.jpeg" alt="Picture" style="width:100%">
-        <div class="w3-container">
-          <h3>You_Pop</h3>
-          <p class="w3-opacity">GameJam con compañeros</p>
-          <p> Lo puedes encontrar aqui <a href="https://mike-moli.itch.io/you-pop" title="W3.CSS" target="_blank" class="w3-hover-opacity">You_Pop</a> .</p>
-        </div>
+
+    <!-- Proyecto 8 -->
+    <div class="w3-card w3-light-grey w3-hover-shadow" style="width:300px;border-radius:15px;overflow:hidden;" data-aos="zoom-in" data-aos-delay="100">
+      <img src="fotos/You_Pop.jpeg" alt="You Pop" style="width:100%;height:200px;object-fit:cover;">
+      <div class="w3-container w3-center">
+        <h3 style="color:#E63946;">You Pop</h3>
+        <p class="w3-opacity">GameJam con compañeros</p>
+        <p>Lo puedes encontrar <a href="https://mike-moli.itch.io/you-pop" target="_blank" style="color:#E63946;font-weight:600;">aquí</a>.</p>
       </div>
     </div>
-       <div class="w3-col m4 w3-margin-left ">
-      <div class="w3-light-grey">
-        <img src="fotos/shadow_Portada.png" alt="Picture" style="width:100%">
-        <div class="w3-container">
-          <h3>Shadows Of The Ruins</h3>
-          <p class="w3-opacity">Trabajo de TFM</p>
-          <p> Lo puedes encontrar aqui <a href="https://inthenightdarkness.itch.io/shadows-of-the-ruins" title="W3.CSS" target="_blank" class="w3-hover-opacity">Shadows Of The Ruins</a> .</p>
-        </div>
+
+    <!-- Proyecto 9 -->
+    <div class="w3-card w3-light-grey w3-hover-shadow" style="width:300px;border-radius:15px;overflow:hidden;" data-aos="zoom-in" data-aos-delay="200">
+      <img src="fotos/shadow_Portada.png" alt="Shadows Of The Ruins" style="width:100%;height:200px;object-fit:cover;">
+      <div class="w3-container w3-center">
+        <h3 style="color:#E63946;">Shadows Of The Ruins</h3>
+        <p class="w3-opacity">Trabajo de TFM</p>
+        <p>Lo puedes encontrar <a href="https://inthenightdarkness.itch.io/shadows-of-the-ruins" target="_blank" style="color:#E63946;font-weight:600;">aquí</a>.</p>
       </div>
     </div>
+
   </div>
+</div>
+
   <!-- Contacto -->
   <div class="w3-container" id="contacto" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Contacto.</b></h1>
@@ -248,6 +316,18 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+AOS.init({
+  duration: 1200,
+  once: true
+});
 </script>
 
 </body>
